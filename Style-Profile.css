@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #000428, #004e92);
+  color: #ffffff;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.profile-section {
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  background-color: rgba(10, 25, 47, 0.9);
+  border-radius: 15px;
+}
+
+/* PROFILE HEADER */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  flex-wrap: 
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  max-width: 100%; 
+}
+
+.profile-info {
+  flex-grow: 1;
+  word-wrap: break-word;
+}
+
+.profile-info .profile-name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.profile-info .profile-email {
+  margin: 0;
+  font-size: 14px;
+  color: #a0c4ff;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 15px;
+  border-radius: 15px;
+  color: #ffffff;
+  flex-shrink: 0;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word; 
+}
+
+/* PROFILE ACTIONS */
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+}
+
+.button-navigation {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #1e90ff;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.button-navigation:hover {
+  background-color: #4682b4;
+}
+
+/* PROFILE PORTFOLIO */
+.profile-portfolio h3 {
+  margin-bottom: 1rem;
+}
+
+.profile-portfolio table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-portfolio th,
+.profile-portfolio td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+.profile-portfolio th {
+  color: #1e90ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .balance {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .button-navigation {
+    width: 100%;
+    text-align: center;
+  }
+}
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #d3d3d3;
+  border: 2px solid #000;
+  box-shadow: inset -2px -2px #000, inset 2px 2px #fff;
+  margin-top: 10px;
+}
+
+.portfolio-table th,
+.portfolio-table td {
+  padding: 8px;
+  border: 1px solid #000;
+  text-align: center;
+  background: #e0e0e0;
+}
+
+.portfolio-table th {
+  background: #c0c0c0;
+  font-weight: bold;
+  box-shadow: inset -1px -1px #000, inset 1px 1px #fff;
+}
+
+/* --- PROFILE MODAL SPACING --- */
+
+.profile-modal {
+  padding: 20px;
+}
+
+#portfolio-content {
+  margin-top: 10px;
+}
+
+/* --- SELL BUTTON (retro) --- */
+
+.btn-sell {
+  padding: 5px 10px;
+  background: #ffb6c1;
+  border: 1px solid #8b0000;
+  color: #8b0000;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: inset -1px -1px #000, inset 1px 1px #fff,
+              inset -2px -2px #808080, inset 2px 2px #f0f0f0;
+}
+
+.btn-sell:hover {
+  background: #ff8da1;
+}
+
+/* --- BUY BUTTON improved but same retro style --- */
+
+.btn-buy {
+  width: 100%;
+  padding: 8px;
+  background-color: #90ee90;
+  border: 1px solid #006400;
+  color: #006400;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset -1px -1px #000, inset 1px 1px #fff,
+              inset -2px -2px #808080, inset 2px 2px #f0f0f0;
+}
+
+.btn-buy:hover {
+  background-color: #7fff7f;
+}
+
+/* --- CRYPTO CARD IMPROVED LOOK (retro) --- */
+
+.crypto-card {
+  background: #f0f0f0;
+  border: 2px solid #000;
+  padding: 12px;
+  box-shadow: inset -2px -2px #000, inset 2px 2px #fff;
+}
+
+.crypto-header img {
+  border: 1px solid #000;
+  background: #c0c0c0;
+  padding: 2px;
+}
+
+.crypto-name {
+  font-size: 1rem;
+}
+
+.crypto-price {
+  margin-top: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.crypto-change {
+  margin: 5px 0 10px 0;
+  display: inline-block;
+}
+
+/* --- Align buy button better --- */
+.crypto-buy-action {
+  margin-top: 10px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinBuy - Giełda Kryptowalut</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navigation">
+        
+      </nav>
+
+      <div class="site-title">
+     
+      </div>
+
+      <div class="wallet-display">
+        Stan konta: <span id="wallet-balance">$10,000.00</span>
+      </div>
+
+      <button class="button-navigation btn_profile">Profile</button>
+    </header>
+
+    <main class="main-content">
+      <div class="welcome-section">
+        <h2 class="title-style">Witaj w CoinBuy</h2>
+        <p class="subtitle">Nowoczesna giełda kryptowalut</p>
+      </div>
+
+      <section class="crypto-market">
+        <div class="market-header">
+          <h3 class="section-title">Rynek Kryptowalut</h3>
+        </div>
+        <div id="crypto-container" class="crypto-grid"></div>
+      </section>
+    </main>
+
+    <!-- Profil / Portfel -->
+    <div id="profile-overlay" class="overlay-container">
+      <div class="profile-modal">
+        <button id="close-profile" class="close-btn">&times;</button>
+        <h2>Mój Portfel</h2>
+        <div id="portfolio-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="profile-script.js"></script>
+  </body>
+</html>

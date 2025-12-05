@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #c0c0c0; /* Classic light gray background */
+  color: #000000;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #808080; /* Gray header */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NAVIGATION BUTTON */
+.button-navigation {
+  padding: 5px 10px;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: #d3d3d3;
+  border: 1px solid #000000;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: inset -1px -1px #000, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #f0f0f0;
+}
+
+.button-navigation:hover {
+  background-color: #a9a9a9;
+}
+
+.button-navigation.active {
+  background-color: #a9a9a9;
+  box-shadow: inset 1px 1px #000, inset -1px -1px #fff;
+}
+
+/* SITE TITLE */
+.site-title {
+  margin: 0 auto; /* Center the title in the available space */
+  flex-shrink: 1; /* Allow the title to shrink if space is limited */
+  min-width: 0; /* Allow shrinking below its content size */
+  text-align: center; /* Center the text inside */
+}
+
+.wallet-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #d3d3d3;
+  border: 1px solid #000000;
+  padding: 5px 10px;
+  margin-right: 15px;
+  box-shadow: inset -1px -1px #000, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #f0f0f0;
+}
+
+#wallet-balance {
+    font-weight: bold;
+}
+
+/* TITLE STYLE */
+.title-style {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.welcome-section .title-style {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #333333;
+  font-weight: normal;
+}
+
+/* CRYPTO MARKET */
+.crypto-market {
+  background: #d3d3d3;
+  border-radius: 0;
+  padding: 1rem;
+  border: 1px solid #000000;
+}
+
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* CRYPTO GRID */
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.crypto-card {
+  background: #f0f0f0;
+  border-radius: 0;
+  padding: 1rem;
+  border: 1px solid #000000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.crypto-card:hover {
+  background: #e0e0e0;
+}
+
+.crypto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.crypto-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.crypto-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00008b; /* Dark blue price */
+  margin-bottom: 0.5rem;
+}
+
+.crypto-change {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.crypto-change.positive {
+  background-color: #90ee90; /* Light green */
+  color: #006400; /* Dark green */
+  border: 1px solid #006400;
+}
+
+.crypto-change.negative {
+  background-color: #ffb6c1; /* Light pink */
+  color: #8b0000; /* Dark red */
+  border: 1px solid #8b0000;
+}
+
+.crypto-buy-action {
+    margin-top: auto; /* Pushes the button to the bottom */
+    padding-top: 1rem; /* Some space above the button */
+}
+
+.btn-buy {
+  width: 100%;
+  padding: 8px;
+  background-color: #90ee90;
+  border: 1px solid #006400;
+  color: #006400;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset -1px -1px #000, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #f0f0f0;
+  border-radius: 0;
+}
+
+.btn-buy:hover {
+    background-color: #7cfc00;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .site-title {
+    position: static;
+    transform: none;
+  }
+
+  .crypto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Profile Overlay */
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-modal {
+  background: #c0c0c0;
+  padding: 20px;
+  border: 2px solid #000;
+  box-shadow: inset -2px -2px #000, inset 2px 2px #fff;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.profile-modal h2 {
+    margin-bottom: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #d3d3d3;
+  border: 1px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  box-shadow: inset -1px -1px #000, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #f0f0f0;
+}
+
+.close-btn:hover {
+    background-color: #a9a9a9;
+}.btn-sell{
+
+  background-color: #d3d3d3;
+  border: 1px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+
+
+}
+/* Profile portfolio table */
+.portfolio-table {
+  width: 100%;
+  border-collapse: separate; /* Zmienione z collapse */
+  border-spacing: 0 10px; /* 10px odstęp między wierszami */
+}
+
+.portfolio-table th,
+.portfolio-table td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+  background-color: #f0f0f0; /* lekki kontrast dla wierszy */
+}
+
+/* Opcjonalnie: zaokrąglenie wierszy */
+.portfolio-table td {
+  border-radius: 4px;
+}
