@@ -9,20 +9,17 @@
 
   <body>
     <header class="site-header">
-      <nav class="navigation">
-        
-      </nav>
+      <nav class="navigation"></nav>
 
-      <div class="site-title">
-     
-      </div>
+      <div class="site-title"></div>
 
       <div class="wallet-display">
         Stan konta: <span id="wallet-balance">$10,000.00</span>
       </div>
 
+      <!-- Przyciski -->
       <button class="button-navigation btn_profile">Profil</button>
-      <button class="button-navigation btn_profile">Kontakt</button>
+      <button class="button-navigation btn_contact">Kontakt</button>
     </header>
 
     <main class="main-content">
@@ -39,12 +36,21 @@
       </section>
     </main>
 
-    <!-- Profil / Portfel -->
+    <!-- ================= PROFILE MODAL ================= -->
     <div id="profile-overlay" class="overlay-container">
       <div class="profile-modal">
         <button id="close-profile" class="close-btn">&times;</button>
         <h2>Mój Portfel</h2>
         <div id="portfolio-content"></div>
+      </div>
+    </div>
+
+    <!-- ================= CONTACT MODAL ================= -->
+    <div id="contact-overlay" class="overlay-container">
+      <div class="profile-modal">
+        <button id="close-contact" class="close-btn">&times;</button>
+        <h2>Kontakt</h2>
+        <div id="contact-content"></div>
       </div>
     </div>
 
