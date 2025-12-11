@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Wallet state ---
+    // Stan portfela (saldo i posiadane kryptowaluty)
     const wallet = {
         balance: 10000,
         portfolio: []
     };
 
-    // --- DOM Elements ---
+    // Elementy interfejsu (DOM) - sekcje i przyciski
     const walletBalanceElement = document.getElementById('wallet-balance');
     const cryptoContainer = document.getElementById('crypto-container');
     const profileModal = document.querySelector('.profile-modal');
     const portfolioContentElement = document.getElementById('portfolio-content');
     const profileButton = document.querySelector('.btn_profile');
 
-    // --- LocalStorage ---
+    // Obsługa LocalStorage (zapisywanie i wczytywanie danych portfela)
     function saveWallet() {
         localStorage.setItem('wallet', JSON.stringify(wallet));
     }
@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Update balance ---
+    // Aktualizacja wyświetlanego salda na stronie
     function updateBalanceDisplay() {
         walletBalanceElement.textContent = `$${wallet.balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     }
 
-    // --- Display portfolio ---
+    // Wyświetlanie sekcji portfolio (tabela z posiadanymi walutami)
     function displayPortfolio() {
         if (!portfolioContentElement) return;
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         portfolioContentElement.appendChild(portfolioTable);
     }
 
-    // --- Buy ---
+    // Funkcja kupna: sprawdza środki, aktualizuje stan i zapisuje
     function handleBuyTransaction(id, name, price) {
         const quantityRaw = prompt(`Ile ${name} chcesz kupić?`, '1');
         if (quantityRaw === null || quantityRaw.trim() === '') return;
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayPortfolio();
     }
 
-    // --- Sell ---
+    // Funkcja sprzedaży: sprawdza ilość, aktualizuje stan i zapisuje
     function handleSellTransaction(id) {
         const coinToSell = wallet.portfolio.find(coin => coin.id === id);
         if (!coinToSell) return;
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayPortfolio();
     }
 
-    // --- Fetch crypto data ---
+    // Pobieranie danych z API i wyświetlanie rynku
     let cryptoMarketData = [];
 
     async function fetchCryptoPrices() {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Init ---
+    // Inicjalizacja: start aplikacji, interwały i obsługa przycisków (event listeners)
     function init() {
         loadWallet();
         updateBalanceDisplay();
