@@ -292,3 +292,13 @@ body {
 .portfolio-table td {
   border-radius: 4px;
 }
+.top-clock{
+
+   background-color: #d3d3d3;
+  border: 1px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+padding: 5px;
+
+}
