@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+//    ZEGAR
+
+
+
     function updateClock() {
         const now = new Date();
         const hours = now.getHours().toString().padStart(2, '0');
@@ -38,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+
+    
     setInterval(updateClock, 1000);
     updateClock();
 

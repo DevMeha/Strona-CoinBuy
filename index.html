@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoinBuy - Giełda Kryptowalut</title>
     <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="Style-Contact.css" />
+    <link rel="stylesheet" href="Style-About.css" />
   </head>
 
   <body>
@@ -23,6 +25,8 @@
       </div>
 
       <button class="button-navigation btn_profile">Profile</button>
+      <button class="button-navigation btn_contact">Kontakt</button>
+      <button class="button-navigation btn_about">O nas</button>
     </header>
 
     <main class="main-content">
@@ -48,7 +52,46 @@
       </div>
     </div>
 
+    <!-- Kontakt -->
+    <div id="contact-overlay" class="overlay-container">
+      <div class="contact-modal">
+        <button id="close-contact" class="close-btn">&times;</button>
+        <h2>Kontakt</h2>
+        <form id="contact-form">
+          <label for="city">Miasto:</label>
+          <input type="text" id="city" name="city" value="Warszawa" /><br />
+          <label for="country">Kraj:</label>
+          <input type="text" id="country" name="country" value="Polska" /><br />
+          <label for="phone">Telefon:</label>
+          <input type="tel" id="phone" name="phone" value="123-456-789" /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="xx@example.com" /><br />
+          <label for="message">Inne dane:</label>
+          <textarea id="message" name="message" rows="4"></textarea><br />
+          <button type="submit">Wyślij</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- O nas -->
+    <div id="about-overlay" class="overlay-container">
+      <div class="about-modal">
+        <button id="close-about" class="close-btn">&times;</button>
+        <h2>O nas</h2>
+        <div id="about-content">
+          <p><strong>Nazwa firmy:</strong> CoinBuy S.A.</p>
+          <p><strong>NIP:</strong> 123-456-78-90</p>
+          <p><strong>Adres:</strong> ul. Złota 59, 00-120 Warszawa</p>
+          <p><strong>Telefon:</strong> +48 22 123 45 67</p>
+          <p><strong>Email:</strong> biuro@coinbuy.pl</p>
+          <p><strong>Właściciel:</strong> Jan Kowalski</p>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
     <script src="profile-script.js"></script>
+    <script src="contact-script.js"></script>
+    <script src="about-script.js"></script>
   </body>
 </html>

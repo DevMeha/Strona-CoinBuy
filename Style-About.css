@@ -1,0 +1,17 @@
+.about-modal {
+  background: #c0c0c0;
+  padding: 20px;
+  border: 2px solid #000;
+  box-shadow: inset -2px -2px #000, inset 2px 2px #fff;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.about-modal h2 {
+    margin-bottom: 1rem;
+}
+
+#about-content p {
+  margin-bottom: 10px;
+}
